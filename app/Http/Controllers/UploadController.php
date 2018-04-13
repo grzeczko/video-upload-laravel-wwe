@@ -18,6 +18,11 @@ class UploadController extends Controller
           $location = $randName . '.mp4';
           $fullPath = public_path() . $uploadDir . $location;
 
+          // check if 'uploads/' directory exists. If not, create it.
+          if (!file_exists(public_path() . $uploadDir)) {
+            mkdir(public_path() . $uploadDir, 0777);
+          }
+
           $file = $request->file('video');
           $file->move(public_path() . $uploadDir, $location);
 
