@@ -41,7 +41,8 @@ class UploadController extends Controller
           $ffprobe = FFProbe::create();
           $duration = $ffprobe->format($fullPath)
             ->get('duration');
-          $duration = Carbon::createFromTimestampUTC($duration)->toTimeString();
+          $duration = Carbon::createFromTimestampUTC($duration)
+            ->toTimeString();
 
           // get video filesize
           $filesize = File::size($fullPath);
