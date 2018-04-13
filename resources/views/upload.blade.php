@@ -92,7 +92,7 @@
                     <span><a class="prev">&lt;&lt; PREVIOUS</a></span>
                     <span class="align-right"><a class="next">NEXT &gt;&gt;</a></span>
                   </div>
-                @endif  
+                @endif
 
             </div>
         </div>

@@ -7,6 +7,7 @@ use App\Http\Requests\UploadRequest;
 use Carbon\Carbon;
 use FFMpeg;
 use FFMpeg\FFProbe;
+use Illuminate\Support\Facades\File;
 
 class UploadController extends Controller
 {
@@ -19,8 +20,8 @@ class UploadController extends Controller
           $fullPath = public_path() . $uploadDir . $location;
 
           // check if 'uploads/' directory exists. If not, create it.
-          if (!file_exists(public_path() . $uploadDir)) {
-            mkdir(public_path() . $uploadDir, 0777);
+          if(!File::exists(public_path() . $uploadDir)) {
+            File::makeDirectory(public_path() . $uploadDir, $mode = 0777, true, true);
           }
 
           $file = $request->file('video');
