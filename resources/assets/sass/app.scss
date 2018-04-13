@@ -1,0 +1,106 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Slick Carousel
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.form {
+  input[type=text] {
+    width: 400px;
+  }
+}
+
+.metadata {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.submit-btn {
+  font-weight: bold;
+}
+
+.slider {
+  padding: 10px 10px 0 10px;
+  width: 700px;
+  border: 1px solid #ccc;
+  .slick-slide {
+    p {
+      padding: 0 20px;
+    }
+  }
+}
+
+.arrows {
+  span {
+    width:49%;
+    display:inline-block;
+    &.align-right { text-align:right; }
+    a {
+      cursor: pointer;
+      font-weight: bold;
+      color: navy;
+      &.next {
+        right: 0;
+      }
+    }
+  }
+}
